@@ -44,3 +44,6 @@ export default function Main() {
             title: formData.title,
             category: formData.category,
         };
+
+        const newCardList = [...cardList, newCard];
+        setCardList(newCardList);
