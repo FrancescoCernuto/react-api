@@ -7,3 +7,5 @@ export default function Badge({ badge, retrieveTags }) {
         const value = e.target.id;
 
         if (!tags.includes(e.target.id)) setTags([...tags, value]);
+        return retrieveTags(tags || []);
+    }
