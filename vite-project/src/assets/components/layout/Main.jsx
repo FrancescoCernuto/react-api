@@ -27,7 +27,9 @@ export default function Main() {
     const [formData, setFormData] = useState(formInitialData);
     const [cardList, setCardList] = useState([]);
 
-
+    useEffect(() => {
+        if (formData.isPublic) alert("Public Post!");
+    }, [formData.isPublic]);
 
     function handleFormChange(e) {
         const newFormData = {
