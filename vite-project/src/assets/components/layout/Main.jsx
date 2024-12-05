@@ -17,3 +17,12 @@ export default function Main() {
     useEffect(() => {
         if (formData.isPublic) alert("Public Post!");
     }, [formData.isPublic]);
+
+    function handleFormChange(e) {
+        const newFormData = {
+            ...formData,
+            [e.target.name]:
+                e.target.type === "checkbox" ? e.target.checked : e.target.value,
+        };
+        setFormData(newFormData);
+    }
