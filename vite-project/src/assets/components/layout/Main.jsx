@@ -24,6 +24,11 @@ export default function Main() {
             });
     }
 
+    const [formData, setFormData] = useState(formInitialData);
+    const [cardList, setCardList] = useState([]);
+
+
+
     function handleFormChange(e) {
         const newFormData = {
             ...formData,
