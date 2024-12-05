@@ -31,6 +31,10 @@ export default function Main() {
         if (formData.isPublic) alert("Public Post!");
     }, [formData.isPublic]);
 
+    useEffect(() => {
+        fetchPosts();
+    }, [])
+
     function handleFormChange(e) {
         const newFormData = {
             ...formData,
