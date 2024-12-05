@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-export default function CardList({ cardList handleClick }) {
+export default function CardList({ cardList, handleClick }) {
     return (
         <>
             <div className="post-container text-light row">
