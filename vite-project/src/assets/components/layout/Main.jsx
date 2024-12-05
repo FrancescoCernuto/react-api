@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import CardList from "../CardList";
+import BadgeList from "../BadgeList";
+import { uniqueTags as badgeList } from "../../data/uniqueTags";
+
+
 
 
 const formInitialData = {
@@ -47,3 +51,9 @@ export default function Main() {
 
         const newCardList = [...cardList, newCard];
         setCardList(newCardList);
+
+        // Reset Form
+        setFormData(formInitialData);
+        e.target.publishInput.checked = false;
+        e.target.category.value = "";
+    }
