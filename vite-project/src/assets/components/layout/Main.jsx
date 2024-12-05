@@ -16,7 +16,13 @@ const formInitialData = {
 };
 
 export default function Main() {
-    function fetchPosts()
+    function fetchPosts() {
+        fetch("http://localhost:3000/posts")
+            .then((res) => res.json())
+            .then((data) => {
+                setCardList(data);
+            });
+    }
 
     function handleFormChange(e) {
         const newFormData = {
