@@ -26,3 +26,8 @@ export default function Main() {
         };
         setFormData(newFormData);
     }
+
+    function retrieveTags(tags) {
+        return tags;
+    }
+
