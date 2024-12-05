@@ -5,3 +5,5 @@ export default function Badge({ badge, retrieveTags }) {
 
     function handleChange(e) {
         const value = e.target.id;
+
+        if (!tags.includes(e.target.id)) setTags([...tags, value]);
