@@ -31,3 +31,16 @@ export default function Main() {
         return tags;
     }
 
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        const newCard = {
+            author: formData.author,
+            content: formData.content,
+            id: cardList.length + 1,
+            image: "https://placehold.co/600x400",
+            isPublic: formData.isPublic,
+            tags: retrieveTags(),
+            title: formData.title,
+            category: formData.category,
+        };
