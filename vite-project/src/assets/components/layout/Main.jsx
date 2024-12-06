@@ -15,6 +15,8 @@ const formInitialData = {
     category: "",
 };
 
+const url = import.meta.env.VITE_URL;
+
 export default function Main() {
     function fetchPosts() {
         fetch("http://localhost:3000/posts")
