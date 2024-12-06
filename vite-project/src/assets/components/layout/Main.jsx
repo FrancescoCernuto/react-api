@@ -16,6 +16,7 @@ const formInitialData = {
 };
 
 const url = import.meta.env.VITE_URL;
+console.log(url);
 
 export default function Main() {
     function fetchPosts() {
